@@ -1,0 +1,2042 @@
+ //backgrounds
+var grass = createSprite(200, 200);
+grass.setAnimation("grass");
+grass.scale=4;
+
+//road
+var road = createSprite(200, 200);
+road.setAnimation("road1");
+road.scale = 2;
+road.rotation = 90;
+
+//obstacles1
+var obstacle1 = createSprite(randomNumber(100,300), randomNumber(-2000,-3000));
+obstacle1.setAnimation("groundrock");
+obstacle1.scale = 0.1;
+//obstacles2
+var obstacle2 = createSprite(randomNumber(50,350), randomNumber(-3000,-4000));
+obstacle2.setAnimation("rockgrass");
+obstacle2.scale = 0.3;
+
+//start
+var start = createSprite(200,130);
+start.setAnimation("finishline");
+start.scale = 3;
+
+//finishline
+var finishline = createSprite(200,-60);
+finishline.setAnimation("finishline");
+finishline.scale = 3;
+
+//grass1
+var grass1 = createSprite(390, 50);
+grass1.setAnimation("grass1");
+grass1.scale = 0.6; 
+
+//grass2
+var grass2 = createSprite(392, 150);
+grass2.setAnimation("grass2");
+grass2.scale = 0.6;
+
+//grass3
+var grass3 = createSprite(383,250);
+grass3.setAnimation("grass3");
+grass3.scale = 0.6;
+
+//grass4
+var grass4 = createSprite(388,350);
+grass4.setAnimation("seed");
+grass4.scale = 0.4;
+
+//grass5
+var grass5 = createSprite(20, 200);
+grass5.setAnimation("grass1");
+grass5.scale= 0.6;
+
+//grass6
+var grass6 = createSprite(18, 20);
+grass6.setAnimation("grass2");
+grass6.scale= 0.6;
+
+//grass7
+var grass7 = createSprite(18, 160);
+grass7.setAnimation("seed");
+grass7.scale= 0.6;
+
+//grass8
+var grass8 = createSprite(17,300);
+grass8.setAnimation("grass3");
+grass8.scale = 0.6;
+
+//blue
+var blue = createSprite(250, 199);
+blue.setAnimation("blue");
+blue.scale = 0.8;
+
+//green
+var green = createSprite(330, 200);
+green.setAnimation("green");
+green.scale = 0.8;
+
+//yellow
+var yellow = createSprite(330, 330);
+yellow.setAnimation("yellow");
+yellow.scale= 0.8;
+
+//coin
+var coin = createSprite(randomNumber(40,360), randomNumber(0,160));
+coin.setAnimation("coin");
+coin.scale= 0.6;
+
+//jetpack
+var jetpack = createSprite(randomNumber(60,340), randomNumber(-300,-400));
+jetpack.setAnimation("jetpack");
+jetpack.scale = 0.3;
+
+//graphic
+var graphic = createSprite(30, 100);
+graphic.setAnimation("empty1");
+
+//black1
+var black1 = createSprite(155, -3000);
+black1.setAnimation("black");
+black1.scale = 0.8;
+black1.rotation = 180;
+
+//black2
+var black2 = createSprite(250, 2000);
+black2.setAnimation("new car");
+black2.scale = 0.8;
+
+//truck
+var truck = createSprite(75, -800);
+truck.setAnimation("truck");
+truck.rotation = 180;
+truck.scale = 0.8;
+
+//diamond1
+var diamond1 = createSprite(330, -3000);
+diamond1.setAnimation("diamond");
+diamond1.scale = 0.8;
+//diamond2
+var diamond2 = createSprite(250, -3000);
+diamond2.setAnimation("diamond");
+diamond2.scale = 0.8;
+//diamond3
+var diamond3 = createSprite(155, -3000);
+diamond3.setAnimation("diamond");
+diamond3.scale = 0.8;
+
+var superspeed = createSprite(200,200);
+superspeed.setAnimation("super speed");
+superspeed.visible = 0;
+superspeed.scale = 0.6;
+
+//I'm your superpowers
+var Iamyoursuperpowers = createSprite(330, 80);
+Iamyoursuperpowers.setAnimation("I'm your superpowers");
+Iamyoursuperpowers.scale = 0.3;
+Iamyoursuperpowers.visible = 0;
+
+//hit1
+var perfecthit1 = createSprite(200,40);
+perfecthit1.setAnimation("perfect hit 1");
+perfecthit1.scale = 0.5;
+perfecthit1.visible = 0;
+
+//hit2
+var perfecthit2 = createSprite(200,40);
+perfecthit2.setAnimation("perfect hit 2");
+perfecthit2.scale = 0.5;
+perfecthit2.visible = 0;
+
+//shell1
+var shell1 = createSprite(200, 200);
+shell1.setAnimation("shell1");
+shell1.scale = 0.2;
+shell1.visible = 0;
+
+//shell2
+var shell2 = createSprite(200, 200);
+shell2.setAnimation("shell2");
+shell2.scale = 0.2;
+shell2.visible = 0;
+
+//bomb
+var bomb = createSprite(200, 200);
+bomb.setAnimation("bomb");
+bomb.scale = 0.2;
+bomb.visible = 0;
+
+//logo
+var logo = createSprite(200, 200);
+logo.setAnimation("logo");
+logo.scale = 0.13;
+logo.rotation = 180;
+logo.visible = 0;
+
+//light
+var light = createSprite(200,30);
+light.setAnimation("lightred");
+light.rotation = -90;
+light.scale = 0.7;
+light.visible = 0;
+
+//sign
+var sign1 = createSprite(200, 40);
+sign1.setAnimation("sign1");
+sign1.scale = 0.6;
+sign1.visible = 0;
+
+//choose
+var blackbackground = createSprite(200, 200);
+blackbackground.setAnimation("blackbackground");
+blackbackground.scale = 4;
+
+var chooseblue = createSprite(50, 300);
+chooseblue.setAnimation("blue");
+chooseblue.scale = 0.7;
+
+var choosegreen = createSprite(250, 300);
+choosegreen.setAnimation("green");
+choosegreen.scale = 0.7;
+
+var chooseblack = createSprite(150,300);
+chooseblack.setAnimation("black");
+chooseblack.scale = 0.7;
+
+var choosetruck = createSprite(350,300);
+choosetruck.setAnimation("truck");
+choosetruck.scale = 0.7;
+
+var choosenew = createSprite(160,220);
+choosenew.setAnimation("new car");
+choosenew.scale = 0.7;
+choosenew.rotation = -90;
+
+//model
+var model = createSprite(305,90);
+model.setAnimation("high2");
+
+
+//meadel
+var meadel = createSprite(200,200);
+meadel.setAnimation("gold");
+meadel.visible = 0;
+
+//varibles
+var everythingaboutblue = 0;
+var live = 3;
+var score = 0;
+var supercharge = 0;
+var jet = 0;
+var black1out = 0;
+var black2out = 0;
+var greenout = 0;
+var yellowout = 0;
+var truckout = 0;
+var backgroundtext = 1;
+var backgroundtext2 = 0;
+var startnow = 0;
+var place = 1;
+var finish = 0;
+var greenhit = 0;
+var snowice = 0;
+var counter1 = 0;
+var counter2 = 0;
+var counter3 = 0;
+var counter4 = 0;
+var counter5 = 0;
+var superpower = 0;
+var whatdiamondslooklike = 0;
+var howlong = 500;
+var howlongitwilltake = 20;
+var thisiscool = 0;
+var shellhit1 = 0;
+var shellhit2 = 0;
+var ifshellhit = 0;
+var bombhit1 = 0;
+var last = 0;
+var speed = 0;
+var speedfast = 0;
+
+//slowdown
+function slowdown() {
+  green.velocityY = -4;
+  grass1.velocityY = grass1.velocityY -4;
+  grass2.velocityY = grass2.velocityY -4;
+  grass3.velocityY = grass3.velocityY -4;
+  grass4.velocityY = grass4.velocityY -4;
+  grass5.velocityY = grass5.velocityY -4;
+  grass6.velocityY = grass6.velocityY -4;
+  grass7.velocityY = grass7.velocityY -4;
+  grass8.velocityY = grass8.velocityY -4;
+  coin.velocityY = coin.velocityY -4;
+  jetpack.velocityY = jetpack.velocityY -4;
+  black1.velocityY = black1.velocityY +4;
+  truck.velocityY = truck.velocityY +4;
+  black2.velocityY = -4;
+  yellow.velocityY = -4;
+}
+
+//diamonds1
+function diamonds1() {
+  diamond1.x = 155;
+  diamond1.y = -3000;
+  diamond2.x = 250;
+  diamond2.y = -3000;
+  diamond3.x = 330;
+  diamond3.y = -3000;
+}
+
+//diamonds2
+function diamonds2() {
+  diamond1.x = 75;
+  diamond1.y = -3000;
+  diamond2.x = 250;
+  diamond2.y = -3000;
+  diamond3.x = 330;
+  diamond3.y = -3000;
+}
+
+//diamonds3
+function diamonds3() {
+  diamond1.x = 155;
+  diamond1.y = -3000;
+  diamond2.x = 75;
+  diamond2.y = -3000;
+  diamond3.x = 330;
+  diamond3.y = -3000;
+}
+  
+//diamonds4
+function diamonds4() {
+  diamond1.x = 155;
+  diamond1.y = -3000;
+  diamond2.x = 250;
+  diamond2.y = -3000;
+  diamond3.x = 75;
+  diamond3.y = -3000;
+}
+
+
+//slowdown2
+function slowdown2() {
+  green.velocityY = -3;
+  grass1.velocityY = grass1.velocityY -3;
+  grass2.velocityY = grass2.velocityY -3;
+  grass3.velocityY = grass3.velocityY -3;
+  grass4.velocityY = grass4.velocityY -3;
+  grass5.velocityY = grass5.velocityY -3;
+  grass6.velocityY = grass6.velocityY -3;
+  grass7.velocityY = grass7.velocityY -3;
+  grass8.velocityY = grass8.velocityY -3;
+  coin.velocityY = coin.velocityY -3;
+  jetpack.velocityY = jetpack.velocityY -3;
+  black1.velocityY = black1.velocityY -3;
+  black2.velocityY = black2.velocityY+3;
+  yellow.velocityY = yellow.velocityY -3;
+}
+
+//faster
+function faster() {
+  grass1.velocityY = grass1.velocityY +1;
+  grass2.velocityY = grass2.velocityY +1;
+  grass3.velocityY = grass3.velocityY +1;
+  grass4.velocityY = grass4.velocityY +1;
+  grass5.velocityY = grass5.velocityY +1;
+  grass6.velocityY = grass6.velocityY +1;
+  grass7.velocityY = grass7.velocityY +1;
+  grass8.velocityY = grass8.velocityY +1;
+  coin.velocityY = coin.velocityY +1;
+  jetpack.velocityY = jetpack.velocityY +1;
+  obstacle2.velocityY = obstacle2.velocityY +1;
+  obstacle1.velocityY = obstacle1 +1;
+  diamond3.velocityY = diamond3.velocityY +2;
+  diamond2.velocityY = diamond2.velocityY +2;
+  diamond1.velocityY = diamond1.velocityY +2;
+  if ((blue.isTouching(jetpack)) && (supercharge < 10)){
+    jetpack.y = randomNumber(-300,-400);
+    jetpack.x = randomNumber(60,340);
+    supercharge = supercharge +2;
+    jet = jet + 6;
+  }
+}
+
+//faster2
+function faster2() {
+  grass1.velocityY = grass1.velocityY +2;
+  grass2.velocityY = grass2.velocityY +2;
+  grass3.velocityY = grass3.velocityY +2;
+  grass4.velocityY = grass4.velocityY +2;
+  grass5.velocityY = grass5.velocityY +2;
+  grass6.velocityY = grass6.velocityY +2;
+  grass7.velocityY = grass7.velocityY +2;
+  grass8.velocityY = grass8.velocityY +2;
+  coin.velocityY = coin.velocityY +2;
+  jetpack.velocityY = jetpack.velocityY +2;
+  green.velocityY = green.velocityY +2;
+  yellow.velocityY = yellow.velocityY +2;
+  obstacle2.velocityY = obstacle2.velocityY +2;
+  obstacle1.velocityY = obstacle1 +2;
+  diamond3.velocityY = diamond3.velocityY +2;
+  diamond2.velocityY = diamond2.velocityY +2;
+  diamond1.velocityY = diamond1.velocityY +2;
+}
+
+//loop
+function draw() {
+  background("white");
+  if ((mousePressedOver(chooseblue) && everythingaboutblue <= 0)){
+    playSound("sound://category_app/app_button_5.mp3", false);
+    blackbackground.visible = 0;
+    chooseblue.destroy();
+    choosegreen.destroy();
+    chooseblack.destroy();
+    choosetruck.destroy();
+    choosenew.destroy();
+    startnow = 1;
+    backgroundtext = 0;
+    model.destroy();
+    counter3 =1;
+  }
+  if ((mousePressedOver(choosegreen) && everythingaboutblue <= 0)){
+    playSound("sound://category_app/app_button_5.mp3", false);
+    blue.setAnimation("green");
+    green.setAnimation("blue");
+    blackbackground.visible = 0;
+    chooseblue.destroy();
+    choosegreen.destroy();
+    chooseblack.destroy();
+    choosetruck.destroy();
+    choosenew.destroy();
+    startnow = 1;
+    backgroundtext = 0;
+    model.destroy();
+    counter2 =1;
+  }
+  
+  if ((mousePressedOver(chooseblack) && everythingaboutblue <= 0)){
+    playSound("sound://category_app/app_button_5.mp3", false);
+    blue.setAnimation("black");
+    counter1 = 1;
+    blackbackground.visible = 0;
+    chooseblue.destroy();
+    choosegreen.destroy();
+    chooseblack.destroy();
+    choosetruck.destroy();
+    choosenew.destroy();
+    startnow = 1;
+    backgroundtext = 0;
+    model.destroy();
+  }
+  if ((mousePressedOver(choosetruck) && everythingaboutblue <= 0)){
+    playSound("sound://category_app/app_button_5.mp3", false);
+    blue.setAnimation("truck");
+    counter4 = 1;
+    blackbackground.visible = 0;
+    chooseblue.destroy();
+    choosegreen.destroy();
+    chooseblack.destroy();
+    choosetruck.destroy();
+    choosenew.destroy();
+    startnow = 1;
+    backgroundtext = 0;
+    model.destroy();
+  }
+  if ((mousePressedOver(choosenew) && everythingaboutblue <= 0)){
+    playSound("sound://category_app/app_button_5.mp3", false);
+    blue.setAnimation("new car");
+    counter5 = 1;
+    blackbackground.visible = 0;
+    chooseblue.destroy();
+    choosegreen.destroy();
+    chooseblack.destroy();
+    choosetruck.destroy();
+    choosenew.destroy();
+    startnow = 1;
+    backgroundtext = 0;
+    model.destroy();
+  }
+  if (startnow >= 1){
+    everythingaboutblue = everythingaboutblue +1;
+    thisiscool = 1;
+  }
+  //hit other cars
+  if (score >= 20){
+    //green back
+    if ((blue.isTouching(green)) && (green.y < 150) &&(blue.x < green.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      green.setAnimation("greencrash1");
+      green.velocityY = +7;
+      green.rotationSpeed = 3;
+      green.rotation = +30;
+      green.velocityX = 3;
+    }
+    if ((blue.isTouching(green)) && (green.y < 150) &&(blue.x >= green.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      green.setAnimation("greencrash1");
+      green.velocityY = +7;
+      green.rotationSpeed = 3;
+      green.rotation = -30;
+      green.velocityX = -3;
+    }
+    //green front
+    if ((blue.isTouching(green)) && (green.y >= 260) &&(blue.x < green.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      green.setAnimation("greencrash1");
+      green.rotationSpeed = 3;
+      green.rotation = +360;
+      green.velocityY = +7;
+      green.velocityX = 3;
+    }
+    if ((blue.isTouching(green)) && (green.y >= 260) &&(blue.x >= green.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      green.setAnimation("greencrash1");
+      green.rotationSpeed = 3;
+      green.rotation = -360;
+      green.velocityY = +7;
+      green.velocityX = -3;
+    }
+    //green middle
+    if ((blue.isTouching(green)) && (green.y < 260) && (green.y >= 150) &&(blue.x < green.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      green.setAnimation("greencrash1");
+      green.velocityY = +7;
+      green.velocityX = +5;
+    }
+    if ((blue.isTouching(green)) && (green.y < 260) && (green.y >= 150) &&(blue.x >= green.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      green.setAnimation("greencrash1");
+      green.velocityY = +7;
+      green.velocityX = -5;
+    }
+    //yellow back
+    if ((blue.isTouching(yellow)) && (yellow.y < 150) && (blue.x >= yellow.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityY = +7;
+      yellow.rotationSpeed = 3;
+      yellow.rotation = +30;
+      yellow.velocityX = -3;
+    }
+
+    if ((blue.isTouching(yellow)) && (yellow.y < 150) && (blue.x < yellow.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityY = +7;
+      yellow.rotationSpeed = 3;
+      yellow.rotation = -30;
+      yellow.velocityX = 3;
+    }
+    //yellow front
+    if ((blue.isTouching(yellow)) && (yellow.y >= 260) && blue.x < yellow.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      yellow.setAnimation("yellowcrash1");
+      yellow.rotationSpeed = 3;
+      yellow.rotation = 360;
+      yellow.velocityY = +7;
+      yellow.velocityX = 3;
+    }
+    if ((blue.isTouching(yellow)) && (yellow.y >= 260) && blue.x >= yellow.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      yellow.setAnimation("yellowcrash1");
+      yellow.rotationSpeed = 3;
+      yellow.rotation = -360;
+      yellow.velocityY = +7;
+      yellow.velocityX = -3;
+    }
+    //yellow middle
+    if ((blue.isTouching(yellow)) && (yellow.y < 260) && (yellow.y >= 150) && (blue.x < yellow.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityY = +7;
+      yellow.velocityX = 5;
+      
+    }
+    if ((blue.isTouching(yellow)) && (yellow.y < 260) && (yellow.y >= 150) && (blue.x >= yellow.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityY = +7;
+      yellow.velocityX = -5;
+    }
+    
+    //black2 back
+    if ((blue.isTouching(black2)) && (black2.y < 150) && blue.x < black2.x ){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      black2.setAnimation("new carcrash");
+      black2.velocityX = 4;
+      black2.rotationSpeed = 3;
+      black2.rotation = -30;
+      black2.velocityY = +7;
+    }
+    if ((blue.isTouching(black2)) && (black2.y < 150) && blue.x >= black2.x ){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      black2.setAnimation("new carcrash");
+      black2.velocityX = -4;
+      black2.rotationSpeed = 3;
+      black2.rotation = +30;
+      black2.velocityY = +7;
+    }
+    //black2 front
+    if ((blue.isTouching(black2)) && (black2.y >= 260) && blue.x < black2.x ){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      black2.setAnimation("new carcrash");
+      black2.rotationSpeed = 3;
+      black2.rotation = +30;
+      black2.velocityY = +7;
+      black2.velocityX = 7;
+    }
+    if ((blue.isTouching(black2)) && (black2.y >= 260) && blue.x >= black2.x ){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      black2.setAnimation("new carcrash");
+      black2.rotationSpeed = 3;
+      black2.rotation = -30;
+      black2.velocityY = +7;
+      black2.velocityX = -7;
+    }
+    // black2 middle
+    if ((blue.isTouching(black2)) && (black2.y < 260) && (black2.y >= 150) && blue.x < black2.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 20;
+      black2.setAnimation("new carcrash");
+      black2.velocityY = +7;
+      black2.velocityX = 3;
+    }
+    if ((blue.isTouching(black2)) && (black2.y < 260) && (black2.y >= 150) && blue.x >= black2.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      black2.setAnimation("new carcrash");
+      black2.velocityY = +7;
+      black2.velocityX = -3;
+    }
+    //black1 front
+    if ((blue.isTouching(black1)) && (black1.y < 150) && (blue.x >= black1.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      black1.setAnimation("blackcrash1");
+      black1.rotation = 180;
+      black1.velocityY = +3;
+      black1.rotationSpeed = 3;
+      black1.rotation = +30;
+      black1.velocityX = -3;
+    }
+
+    if ((blue.isTouching(black1)) && (black1.y < 150) && (blue.x < black1.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      black1.setAnimation("blackcrash1");
+      black1.rotation = 180;
+      black1.velocityY = +3;
+      black1.rotationSpeed = 3;
+      black1.rotation = -30;
+      black1.velocityX = 3;
+    }
+    //black1 back
+    if ((blue.isTouching(black1)) && (black1.y >= 260) && blue.x < black1.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      black1.setAnimation("blackcrash1");
+      black1.rotation = 180;
+      black1.rotationSpeed = 3;
+      black1.rotation = 360;
+      black1.velocityY = +7;
+      black1.velocityX = 3;
+    }
+    if ((blue.isTouching(black1)) && (black1.y >= 260) && blue.x >= black1.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      black1.setAnimation("blackcrash1");
+      black1.rotation = 180;
+      black1.rotationSpeed = 3;
+      black1.rotation = -360;
+      black1.velocityY = +7;
+      black1.velocityX = -3;
+    }
+    //black1 middle
+    if ((blue.isTouching(black1)) && (black1.y < 260) && (black1.y >= 150) && (blue.x < black1.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      black1.setAnimation("blackcrash1");
+      black1.rotation = 180;
+      black1.velocityY = +7;
+      black1.velocityX = 5;
+    }
+    //truck front
+    if ((blue.isTouching(truck)) && (truck.y < 150) && (blue.x >= truck.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      truck.setAnimation("truckcrash1");
+      truck.rotation = 180;
+      truck.velocityY = +3;
+      truck.rotationSpeed = 3;
+      truck.rotation = +30;
+      truck.velocityX = -3;
+      if (counter1 == 1 || counter2 == 1 || counter3 == 1){
+        live = 1;
+      }
+      
+    }
+
+    if ((blue.isTouching(truck)) && (truck.y < 150) && (blue.x < truck.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      truck.setAnimation("truckcrash1");
+      truck.rotation = 180;
+      truck.velocityY = +3;
+      truck.rotationSpeed = 3;
+      truck.rotation = -30;
+      truck.velocityX = 3;
+      if (counter1 == 1 || counter2 == 1 || counter3 == 1){
+        live = 1;
+      }
+    }
+    //truck back
+    if ((blue.isTouching(truck)) && (truck.y >= 260) && blue.x < truck.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      truck.setAnimation("truckcrash1");
+      truck.rotation = 180;
+      truck.rotationSpeed = 3;
+      truck.rotation = 360;
+      truck.velocityY = +7;
+      truck.velocityX = 3;
+      if (counter1 == 1 || counter2 == 1 || counter3 == 1){
+        live = 1;
+      }
+    }
+    if ((blue.isTouching(truck)) && (truck.y >= 260) && blue.x >= truck.x){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      truck.setAnimation("truckcrash1");
+      truck.rotation = 180;
+      truck.rotationSpeed = 3;
+      truck.rotation = -360;
+      truck.velocityY = +7;
+      truck.velocityX = -3;
+      if (counter1 == 1 || counter2 == 1 || counter3 == 1){
+        live = 1;
+      }
+    }
+    //truck middle
+    if ((blue.isTouching(truck)) && (truck.y < 260) && (truck.y >= 150) && (blue.x < truck.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      truck.setAnimation("truckcrash1");
+      truck.rotation = 180;
+      truck.velocityY = +7;
+      truck.velocityX = 5;
+      if (counter1 == 1 || counter2 == 1 || counter3 == 1){
+        live = 1;
+      }
+    }
+    if ((blue.isTouching(truck)) && (truck.y < 260) && (truck.y >= 150) && (blue.x >= truck.x)){
+      playSound("sound://category_digital/win.mp3", false);
+      score = score - 10;
+      truck.setAnimation("truckcrash1");
+      truck.rotation = 180;
+      truck.velocityY = +7;
+      truck.velocityX = -5;
+      if (counter1 == 1 || counter2 == 1 || counter3 == 1){
+        live = 1;
+      }
+    }
+  } else {
+    
+    //green back
+    if ((blue.isTouching(green)) && (green.y > 150) && (blue.x < green.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      green.y = green.y - 15;
+    }
+    if ((blue.isTouching(green)) && (green.y > 150) && (blue.x >= green.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      green.y = green.y - 15;
+    }
+    //green front
+    if ((blue.isTouching(green)) && (green.y >= 260) && (blue.x < green.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+    }
+    if ((blue.isTouching(green)) && (green.y >= 260) && (blue.x >= green.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+    }
+    //green middle
+    if ((blue.isTouching(green)) && (green.y < 260) && (green.y >= 150) && (blue.x < green.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      green.y = green.y +60;
+    }
+    if ((blue.isTouching(green)) && (green.y < 260) && (green.y >= 150) && (blue.x >= green.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      green.y = green.y +60;
+    }
+    
+    //yellow back
+    if ((blue.isTouching(yellow)) && (yellow.y > 150) && (blue.x < yellow.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      yellow.y = yellow.y - 15;
+    }
+    if ((blue.isTouching(yellow)) && (yellow.y > 150) && (blue.x >= yellow.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      yellow.y = yellow.y - 15;
+    }
+    //yellow front
+    if ((blue.isTouching(yellow)) && (yellow.y >= 260) &&(blue.x < yellow.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      yellow.y = yellow.y + 15;
+    }
+    if ((blue.isTouching(yellow)) && (yellow.y >= 260) &&(blue.x >= yellow.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      yellow.y = yellow.y + 15;
+    }
+    //yellow middle
+    if ((blue.isTouching(yellow)) && (yellow.y < 260) && (yellow.y >= 150) && (blue.x < yellow.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      yellow.x = yellow.x +20;
+    }
+    if ((blue.isTouching(yellow)) && (yellow.y < 260) && (yellow.y >= 150) && (blue.x >= yellow.x)){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      yellow.x = yellow.x -20;
+    }
+    //black2 back
+    if ((blue.isTouching(black2)) && (black2.y > 150) && blue.x < black2.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      black2.y = black2.y + 15;
+    }
+    if ((blue.isTouching(black2)) && (black2.y > 150) && blue.x >= black2.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      black2.y = black2.y - 15;
+    }
+    //black2 front
+    if ((blue.isTouching(black2)) && (black2.y >= 260) && blue.x < black2.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+    }
+    if ((blue.isTouching(black2)) && (black2.y >= 260) && blue.x >= black2.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+    }
+    //black2 middle
+    if ((blue.isTouching(black2)) && (black2.y < 260) && (black2.y >= 150) && blue.x < black2.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      black2.y = black2.y +60; 
+    }
+    if ((blue.isTouching(black2)) && (black2.y < 260) && (black2.y >= 150) && blue.x >= black2.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      black2.y = black2.y -60; 
+    }
+    //black1 front
+    if ((blue.isTouching(black1)) && (black1.y > 150) && blue.x < black1.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      black1.y = black1.y + 15;
+    }
+    if ((blue.isTouching(black1)) && (black1.y > 150) && blue.x >= black1.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      black1.y = black1.y - 15;
+    }
+    //black1 back
+    if ((blue.isTouching(black1)) && (black1.y >= 260) && blue.x < black1.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+    }
+    if ((blue.isTouching(black1)) && (black1.y >= 260) && blue.x >= black1.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+    }
+    //black2 middle
+    if ((blue.isTouching(black1)) && (black1.y < 260) && (black1.y >= 150) && blue.x < black1.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      black1.y = black1.y +60; 
+    }
+    if ((blue.isTouching(black1)) && (black1.y < 260) && (black1.y >= 150) && blue.x >= black1.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      black1.y = black1.y -60; 
+    }
+    //truck front
+    if ((blue.isTouching(truck)) && (truck.y > 150) && blue.x < truck.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      truck.y = truck.y - 15;
+    }
+    if ((blue.isTouching(truck)) && (truck.y > 150) && blue.x >= truck.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      truck.y = truck.y - 15;
+    }
+    //truck back
+    if ((blue.isTouching(truck)) && (truck.y >= 260) && blue.x < truck.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+    }
+    if ((blue.isTouching(truck)) && (truck.y >= 260) && blue.x >= truck.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+    }
+    //black2 middle
+    if ((blue.isTouching(truck)) && (truck.y < 260) && (truck.y >= 150) && blue.x < truck.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x -40;
+      truck.y = truck.y +60; 
+    }
+    if ((blue.isTouching(truck)) && (truck.y < 260) && (truck.y >= 150) && blue.x >= truck.x){
+      playSound("sound://category_tap/puzzle_game_organic_wood_block_tone_tap_2.mp3", false);
+      blue.x = blue.x +40;
+      truck.y = truck.y -60; 
+    }
+  }
+  //other cars hit other cars
+  //green hit black2 back
+  if ((green.isTouching(black2)) && (black2.y < green.y -50) && green.x < black2.x ){
+    green.x = green.x -10;
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      black2.setAnimation("new carcrash");
+      black2.velocityX = 4;
+      black2.rotationSpeed = 3;
+      black2.rotation = -30;
+      black2.velocityY = +7;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityX = -4;
+      green.rotationSpeed = 3;
+      green.rotation = -30;
+      green.velocityY = +7;
+      counter1 = 1;
+    }
+  }
+  if ((green.isTouching(black2)) && (black2.y < green.y -50) && green.x >= black2.x ){
+    green.x = green.x -10;
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      black2.setAnimation("new carcrash");
+      black2.velocityX = -4;
+      black2.rotationSpeed = 3;
+      black2.rotation = +30;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityX = +4;
+      green.rotationSpeed = 3;
+      green.rotation = -30;
+      green.velocityY = 7;
+    }
+  }
+  //green hit black2 front
+  if ((green.isTouching(black2)) && (black2.y >= green.y +60) && green.x < black2.x ){
+    green.x = green.x +10;
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      black2.setAnimation("new carcrash");
+      black2.rotationSpeed = 3;
+      black2.rotation = +30;
+      black2.velocityY = 7;
+      black2.velocityX = 7;
+    } 
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.rotationSpeed = 3;
+      green.rotation = +30;
+      green.velocityY = 7;
+      green.velocityX = -7;
+    }
+  }
+  if ((green.isTouching(black2)) && (black2.y >= green.y +60) && green.x >= black2.x ){
+    green.x = green.x +10;
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      black2.setAnimation("new carcrash");
+      black2.rotationSpeed = 3;
+      black2.rotation = -30;
+      black2.velocityY = 7;
+      black2.velocityX = -7;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.rotationSpeed = 3;
+      green.rotation = -30;
+      green.velocityY = 7;
+      green.velocityX = +7;
+    }
+  }
+  //green hit black2 middle
+  if ((green.isTouching(black2)) && (black2.y < green.y +60) && (black2.y >= green.y -50) && green.x < black2.x){
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      black2.setAnimation("new carcrash");
+      black2.velocityY = 7;
+      black2.velocityX = 3;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityY = 7;
+      green.velocityX = -3;
+    }
+  }
+  if ((green.isTouching(black2)) && (black2.y < green.y +60) && (black2.y >= green.y -50) && green.x >= black2.x){
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      black2.setAnimation("new carcrash");
+      black2.velocityY = 7;
+      black2.velocityX = -3;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityY = 7;
+      green.velocityX = 3;
+    }
+  }
+  
+  
+  
+  //green hit yellow back
+  if ((green.isTouching(yellow)) && (yellow.y < green.y -50) && green.x < yellow.x ){
+    green.x = green.x -10;
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityX = 4;
+      yellow.rotationSpeed = 3;
+      yellow.rotation = -30;
+      yellow.velocityY = +7;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityX = -4;
+      green.rotationSpeed = 3;
+      green.rotation = -30;
+      green.velocityY = +7;
+    }
+  }
+  if ((green.isTouching(yellow)) && (yellow.y < green.y -50) && green.x >= yellow.x ){
+    green.x = green.x -10;
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityX = -4;
+      yellow.rotationSpeed = 3;
+      yellow.rotation = +30;
+      yellow.velocityY = +7;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityX = +4;
+      green.rotationSpeed = 3;
+      green.rotation = +30;
+      green.velocityY = 7;
+    }
+  }
+  //green hit yellow front
+  if ((green.isTouching(yellow)) && (yellow.y >= green.y +60) && green.x < yellow.x ){
+    green.x = green.x +10;
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      yellow.setAnimation("yellowcrash1");
+      yellow.rotationSpeed = 3;
+      yellow.rotation = +30;
+      yellow.velocityY = 7;
+      yellow.velocityX = 7;
+    } 
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.rotationSpeed = 3;
+      green.rotation = +30;
+      green.velocityY = 7;
+      green.velocityX = -7;
+    }
+  }
+  if ((green.isTouching(yellow)) && (yellow.y >= green.y +60) && green.x >= yellow.x ){
+    greenhit = randomNumber(1,2);
+    green.x = green.x +10;
+    if (greenhit == 1){
+      yellow.setAnimation("yellowcrash1");
+      yellow.rotationSpeed = 3;
+      yellow.rotation = -30;
+      yellow.velocityY = 7;
+      yellow.velocityX = -7;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.rotationSpeed = 3;
+      green.rotation = -30;
+      green.velocityY = 7;
+      green.velocityX = +7;
+    }
+  }
+  //green hit yellow middle
+  if ((green.isTouching(yellow)) && (yellow.y < green.y +60) && (yellow.y >= green.y -50) && green.x < yellow.x){
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityY = 7;
+      yellow.velocityX = 3;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityY = 7;
+      green.velocityX = -3;
+    }
+  }
+  if ((green.isTouching(yellow)) && (yellow.y < green.y +60) && (black2.y >= green.y -50) && green.x >= yellow.x){
+    greenhit = randomNumber(1,2);
+    if (greenhit == 1){
+      yellow.setAnimation("yellowcrash1");
+      yellow.velocityY = 7;
+      yellow.velocityX = -3;
+    }
+    if (greenhit == 2){
+      green.setAnimation("greencrash1");
+      green.velocityY = 7;
+      green.velocityX = 3;
+    }
+  }
+
+  //lightsred
+  if (everythingaboutblue >= 10){
+    light.visible = true;
+  }
+  if (everythingaboutblue == 15){
+    playSound("sound://category_bell/hollow_bell_notification.mp3", false);
+  }
+  //lightyellow
+  if (everythingaboutblue >= 40){
+    light.setAnimation("lightyellow");
+  }
+  if (everythingaboutblue == 45){
+    playSound("sound://category_bell/hollow_bell_notification.mp3", false);
+  }
+  //lightgreen
+  if (everythingaboutblue >= 70){
+    light.setAnimation("lightgreen");
+  }
+  if (everythingaboutblue == 75){
+    playSound("sound://category_bell/hollow_bell_notification.mp3", false);
+  }
+  //gamestart
+  if (everythingaboutblue >= 90){
+    if (everythingaboutblue == 91){
+      playSound("sound://category_bell/vibrant_game_correct_answer_1.mp3", false);
+    }
+    if (speed < 60){
+      speed = speed +1;
+    } else {
+      speed = randomNumber(59,61);
+    }
+    light.visible = 0;
+    road.setAnimation("road2");
+    grass1.velocityY = +7;
+    grass2.velocityY = +7;
+    grass3.velocityY = +7;
+    grass4.velocityY = +7;
+    coin.velocityY = +7;
+    grass5.velocityY = +7;
+    grass6.velocityY = +7;
+    grass7.velocityY = +7;
+    grass8.velocityY = +7;
+    jetpack.velocityY = +7;
+    truck.velocityY = +14;
+    start.velocityY = +7;
+    green.velocityY = -randomNumber(+1.8, 2.5);
+    yellow.velocityY = randomNumber(0.4,1);
+    obstacle2.velocityY = +7;
+    obstacle1.velocityY = +7;
+    black2.velocityY = -3;
+    diamond1.velocityY = +7;
+    diamond2.velocityY = +7;
+    diamond3.velocityY = +7;
+    //left
+    if (keyDown("left") || keyDown("a")){
+      blue.x = blue.x - 5;
+    }
+    //right
+    if (keyDown("right")|| keyDown("d")){
+      blue.x = blue.x + 5;
+    }
+    //mouse control
+    if (keyWentDown("M")){
+      backgroundtext2 = backgroundtext2 +1;
+    }
+    if (backgroundtext2 >= 1){
+      blue.x = World.mouseX;
+    }
+    if (backgroundtext2 >= 2){
+      backgroundtext2 = 0;
+    }
+    //faster
+    if ((keyWentDown("space")) && (supercharge >= 10)){
+      playSound("sound://category_bell/vibrant_game_correct_answer_1.mp3", false);
+    }
+    if ((keyDown("space")) && (supercharge >= 10)){
+      if (speed < 110){
+        speed = speed +10;
+      } else {
+        speed = randomNumber(109,110);
+      }
+      jet = jet -0.1;
+      faster2();
+      logo.visible = 1;
+      logo.x = blue.x;
+      logo.y = blue.y -35;
+    } else {
+      logo.visible = 0;
+    }
+  }
+  
+  //black1 out of screen
+  black1.velocityY = + 14;
+  if (black1.y >= 460){
+    black1.y = randomNumber(-5000,-7000);
+    black1out = randomNumber(1,2);
+    if (black1out == 1){
+    black1.x = 160;
+    }
+    if (black1out == 2){
+    black1.x = 75;
+    
+    }
+  }
+  //truck out of screen
+  if (truck.y >= 460){
+    truck.y = randomNumber(-5000,-7000);
+    truckout = randomNumber(1,2);
+    if (truckout == 1){
+    truck.x = 160;
+    }
+    if (truckout == 2){
+    truck.x = 75;
+    }
+  }
+  //black2 out of screen
+  if (black2.y <= -460){
+    black2.y = randomNumber(2000,3000);
+    black2out = randomNumber(1,2);
+    if (black2out == 1){
+    black2.x = 250;
+    }
+    if (black2out == 2){
+    black2.x = 330;
+    }
+  }
+  //yellow out of screen
+  if (yellow.y <= -460){
+    
+    yellowout = randomNumber(1,2);
+    if (yellowout == 1){
+    yellow.x = 250;
+    }
+    if (yellowout == 2){
+    yellow.x = 330;
+    }
+  }  
+    if (yellow.y >= 460){
+    yellowout = randomNumber(1,2);
+    if (yellowout == 1){
+      yellow.x = 250;
+    }
+    if (yellowout == 2){
+      yellow.x = 330;
+    }
+    yellow.rotationSpeed = 0;
+    yellow.rotation = 0;
+  }
+  //green out of screen
+  if (green.y <= -50){
+    greenout = randomNumber(1,2);
+    if (greenout == 1){
+    green.x = 250;
+    }
+    if (greenout == 2){
+    green.x = 330;
+    }
+    green.rotation = 0;
+    
+  }  
+  if (green.y >= 800){
+    greenout = randomNumber(1,2);
+    if (greenout == 1){
+    green.x = 250;
+    }
+    if (greenout == 2){
+    green.x = 330;
+    }
+    green.rotationSpeed = 0;
+    green.rotation = 0;
+  }
+  //obstacle1 out of screen
+  if (obstacle1.y >= 430){
+    obstacle1.x = randomNumber(100,300);
+    obstacle1.y = randomNumber(-2000,-3000);
+  }
+  if (obstacle2.y >= 430){
+    obstacle2.x = randomNumber(100,300);
+    obstacle2.y = randomNumber(-2000,-3000);
+  }
+  
+  //grass1 out of screen
+  if (grass1.y >= 430){
+    grass1.y = randomNumber(-20,-40);
+  }
+  //grass2 out of screen
+  if (grass2.y >= 430){
+    grass2.y = randomNumber(-40,-60);
+  }
+  //grass3 out of screen
+  if (grass3.y >= 430){
+    grass3.y = randomNumber(-40,-60);
+  }
+  //grass4 out of screen
+  if (grass4.y >= 430){
+    grass4.y = randomNumber(-40,-60);
+  }
+  //grass5 out of screen
+  if (grass5.y >= 430){
+    grass5.y = randomNumber(-20,-40);
+  }
+  //grass6 out of screen
+  if (grass6.y >= 430){
+    grass6.y = randomNumber(-40,-60);
+  }
+  //grass7 out of screen
+  if (grass7.y >= 430){
+    grass7.y = randomNumber(-40,-60);
+  }
+  //grass8 out of screen
+  if (grass8.y >= 430){
+    grass8.y = randomNumber(-40,-60);
+  }
+  //coin out of screen
+  if (coin.y >= 430){
+    coin.y = randomNumber(-40,-60);
+    coin.x = randomNumber(40,360);
+  }
+  //jetpack out of screen
+  if (jetpack.y >= 440){
+    jetpack.y = randomNumber(-300,-500);
+    jetpack.x = randomNumber(60,340);
+  }
+  //diamonds out of screen
+  if (diamond1.y >= 430){
+    whatdiamondslooklike = randomNumber(1,4);
+    if (whatdiamondslooklike == 1){
+      diamonds1();
+    }
+    if (whatdiamondslooklike == 2){
+      diamonds2();
+    }
+    if (whatdiamondslooklike == 3){
+      diamonds3();
+    }
+    if (whatdiamondslooklike == 4){
+      diamonds4();
+    }
+  }
+  if ((diamond1.y < -20 && diamond2.y < -20 && diamond2.y < -20)){
+    diamond1.y = diamond2.y;
+    diamond2.y = diamond3.y;
+  }
+  //diamonds out of screen
+  if (diamond2.y >= 430){
+    whatdiamondslooklike = randomNumber(1,4);
+    if (whatdiamondslooklike == 1){
+      diamonds1();
+    }
+    if (whatdiamondslooklike == 2){
+      diamonds2();
+    }
+    if (whatdiamondslooklike == 3){
+      diamonds3();
+    }
+    if (whatdiamondslooklike == 4){
+      diamonds4();
+    }
+  }
+  //diamonds out of screen
+  if (diamond3.y >= 430){
+    whatdiamondslooklike = randomNumber(1,4);
+    if (whatdiamondslooklike == 1){
+      diamonds1();
+    }
+    if (whatdiamondslooklike == 2){
+      diamonds2();
+    }
+    if (whatdiamondslooklike == 3){
+      diamonds3();
+    }
+    if (whatdiamondslooklike == 4){
+      diamonds4();
+    }
+  }
+  superspeed.x = blue.x;
+  superspeed.y = blue.y +10;
+  
+  //useful
+  if (jet <= 0){
+    supercharge = 0;
+  }
+  
+  //blue touch diamond
+  if (blue.isTouching(diamond1)){
+    playSound("sound://category_bell/choose_background.mp3", false);
+    superpower = randomNumber(1,6);
+    diamond1.y = -3000;
+    Iamyoursuperpowers.visible = 0;
+    if (superpower == 1){
+      howlong = 500;
+    }
+  }
+  if (blue.isTouching(diamond2)){
+    playSound("sound://category_bell/choose_background.mp3", false);
+    howlongitwilltake = 20;
+    superpower = randomNumber(1,6);
+    diamond2.y = -3000;
+    Iamyoursuperpowers.visible = 1;
+    if (superpower == 1){
+      howlong = 500;
+    }
+  }
+  if (blue.isTouching(diamond3)){
+    playSound("sound://category_bell/choose_background.mp3", false);
+    howlongitwilltake = 20;
+    superpower = randomNumber(1,6);
+    diamond3.y = -3000;
+    Iamyoursuperpowers.visible = 1;
+    if (superpower == 1){
+      howlong = 500;
+    }
+  }
+  howlongitwilltake = howlongitwilltake-1;
+  if ((superpower == 1 && howlongitwilltake == 0)){
+    playSound("sound://category_whoosh/alien_ship_flyby_whoosh_6.mp3", false);
+  }
+  if ((superpower == 1 && howlongitwilltake <= 0)){
+    if (speed < 135){
+      speed = speed +35;
+    } else {
+      speed = randomNumber(134,136);
+    }
+    Iamyoursuperpowers.visible = 0;
+    superspeed.visible = 1;
+    howlong = howlong -1;
+    faster2();
+    faster2();
+    faster2();
+    if (howlong <= 0){
+      superpower = 0;
+    }
+  }else{
+    superspeed.visible = 0;
+  }
+  if ((superpower == 2 && howlongitwilltake <= 0)){
+    live = live +1; 
+    superpower = 0;
+    Iamyoursuperpowers.visible = 0;
+  }
+  if ((superpower == 3 && howlongitwilltake <= 0)){
+    score = score +10;
+    superpower = 0;
+    Iamyoursuperpowers.visible = 0;
+  }
+  if ((superpower == 4 && howlongitwilltake <= 0)){
+    shellhit1 = 0;
+    shell1.visible = 1;
+    if (keyWentDown("up") || keyWentDown("w")){
+      playSound("sound://category_explosion/air_explode_bonus_5.mp3", false);
+      shell1.velocityY = -5;
+      shellhit1 = 1;
+      superpower = 0;
+    }
+    if (keyWentDown("down") || keyWentDown("s")){
+      playSound("sound://category_explosion/air_explode_bonus_5.mp3", false);
+      shell1.velocityY = +15;
+      shellhit1 = 1;
+      superpower = 0;
+    }
+    Iamyoursuperpowers.visible = 0;
+  }
+  if ((superpower == 5 && howlongitwilltake <= 0 && place >1)){
+    shellhit2 = 0;
+    shell2.visible = 1;
+    if (keyWentDown("up") || keyWentDown("w")){
+      playSound("sound://category_explosion/8bit_explosion.mp3", false);
+      if ((green.y < blue.y && green.x < yellow.x)){
+        green.y = 20;
+        shell1.visible = 0;
+        superpower = 0;
+      }
+      if ((yellow.y < blue.y  && yellow.x < green.x)){
+        yellow.y = 20;
+        shell1.visible = 0;
+        superpower = 0;
+      }
+    }
+    if (ifshellhit == 1){
+      green.velocityY = green.velocityY +10;
+    }
+    if (ifshellhit == 2){
+      yellow.velocityY = yellow.velocityY +10;
+    }
+    Iamyoursuperpowers.visible = 0;
+  }
+  if ((superpower == 6 && howlongitwilltake <= 0)){
+    bomb.visible = 1;
+    Iamyoursuperpowers.visible = 0;
+  }
+  if ((bomb.visible == 1 && bomb.y == blue.y -80)){
+    if (keyWentDown("up") || keyWentDown("w")){
+      bombhit1 = 1;
+      bomb.velocityY = -5;
+    }
+    if (keyWentDown("down") || keyWentDown("s")){
+      bombhit1 = 1;
+      bomb.velocityY = +15;
+    }
+  }
+  // shells
+  if (shellhit1 == 0){
+    shell1.x = blue.x -60;
+    shell1.y = blue.y;
+  }
+  if (shellhit2 == 0){
+    shell2.x = blue.x +60;
+    shell2.y = blue.y;
+  }
+  if (bombhit1 ==0){
+    bomb.x = blue.x;
+    bomb.y = blue.y - 80;
+  }
+  //shell hit other cars
+  if ((shell1.isTouching(green) && shell1.visible == 1 )){
+    playSound("sound://category_bell/quiet_belloctave_notification.mp3", false);
+    green.setAnimation("greencrash1");
+    green.velocityY = +7;
+    shell1.y = blue.y;
+    shell1.x = blue.x -60;
+    shellhit1 = 0;
+    shell1.visible = 0;
+    perfecthit1.visible = 1;
+  }else{
+    perfecthit1.visible = 0;
+  }
+  if ((bomb.isTouching(green) && bomb.visible == 1 )){
+    bombhit1 = 0;
+    superpower = 0;
+    bomb.visible = 0;
+    green.setAnimation("greencrash1");
+    green.velocityY = +7;
+  }
+  
+  //blue touch jet
+  if (blue.isTouching(jetpack)){
+    playSound("sound://category_collect/energy_bar_recharge_2.mp3", false);
+    jetpack.y = randomNumber(-300,-400);
+    jetpack.x = randomNumber(60,340);
+    supercharge = supercharge +1;
+    jet = jet + 3;
+  }
+  if ((blue.isTouching(jetpack)) && (supercharge >= 10) && (jet >= 60)){
+    jetpack.y = randomNumber(-400,-600);
+    jetpack.x = randomNumber(60,340);
+  }
+  //blue touch obstacle1
+  if ((blue.isTouching(obstacle1) && everythingaboutblue <= 20000)){
+    playSound("sound://category_digital/failure.mp3", false);
+    obstacle1.x = randomNumber(100,300);
+    obstacle1.y = randomNumber(-6000,-8000);
+    live = live -1;
+  }
+  //blue touch obstacle2
+  if ((blue.isTouching(obstacle2) && everythingaboutblue <= 20000)){
+    playSound("sound://category_digital/failure.mp3", false);
+    obstacle2.x = randomNumber(100,300);
+    obstacle2.y = randomNumber(-6000,-8000);
+    live = live -1;
+  }
+  //green touch obstacle1
+  if ((green.isTouching(obstacle1) && everythingaboutblue <= 20000)){
+    obstacle1.x = randomNumber(100,300);
+    obstacle1.y = randomNumber(-6000,-8000);
+  }
+  //green touch obstacle2
+  if (green.isTouching(obstacle2)){
+    obstacle2.x = randomNumber(100,300);
+    obstacle2.y = randomNumber(-6000,-8000);
+  }
+  //yellow touch obstacle1
+  if (yellow.isTouching(obstacle1)){
+    obstacle1.x = randomNumber(100,300);
+    obstacle1.y = randomNumber(-6000,-8000);
+  }
+  //yellow touch obstacle2
+  if (yellow.isTouching(obstacle2)){
+    obstacle2.x = randomNumber(100,300);
+    obstacle2.y = randomNumber(-6000,-8000);
+  }
+  //black2 touch obstacle1
+  if (black2.isTouching(obstacle1)){
+    obstacle1.x = randomNumber(100,300);
+    obstacle1.y = randomNumber(-6000,-8000);
+  }
+  //black2 touch obstacle2
+  if (black2.isTouching(obstacle2)){
+    obstacle2.x = randomNumber(100,300);
+    obstacle2.y = randomNumber(-6000,-8000);
+  }
+  //black1 touch obstacle1
+  if (black1.isTouching(obstacle1)){
+    obstacle1.x = randomNumber(100,300);
+    obstacle1.y = randomNumber(-6000,-8000);
+  }
+  //black1 touch obstacle2
+  if (black1.isTouching(obstacle2)){
+    obstacle2.x = randomNumber(100,300);
+    obstacle2.y = randomNumber(-6000,-8000);
+  }
+  //truck touch obstacle1
+  if (truck.isTouching(obstacle1)){
+    obstacle1.x = randomNumber(100,300);
+    obstacle1.y = randomNumber(-6000,-8000);
+  }
+  //truck touch obstacle2
+  if (truck.isTouching(obstacle2)){
+    obstacle2.x = randomNumber(100,300);
+    obstacle2.y = randomNumber(-6000,-8000);
+  }
+  //blue touch jet when full
+   if (blue.isTouching(jetpack) && (jet >= 60)){
+    jetpack.y = randomNumber(-400,-600);
+    jetpack.x = randomNumber(60,340);
+  }
+  //blue touch coin
+  if (blue.isTouching(coin)){
+    playSound("sound://category_collect/collect_item_bling_1.mp3", false);
+    coin.y = randomNumber(-40,-60);
+    coin.x = randomNumber(40,360);
+    score = score +1;
+  }
+  
+  //battery
+  if (jet >= 3){
+    graphic.setAnimation("empty2");
+  }
+  if (jet >= 6){
+    graphic.setAnimation("low1");
+  }
+  if (jet >= 9){
+    graphic.setAnimation("low2");
+  }
+  if (jet >= 12){
+    graphic.setAnimation("low3");
+  }
+  if (jet >= 15){
+    graphic.setAnimation("m1");
+  }
+  if (jet >= 18){
+    graphic.setAnimation("m2");
+  }
+  if (jet >= 21){
+    graphic.setAnimation("m3");
+  }
+  if (jet >= 24){
+    graphic.setAnimation("m4");
+  }
+  if (jet >= 27){
+    graphic.setAnimation("high1");
+  }
+  if (jet >= 30){
+    graphic.setAnimation("high2");
+  }
+  if (jet >= 33){
+    graphic.setAnimation("high3");
+  }
+  if (jet >= 36){
+    graphic.setAnimation("high4");
+  }
+  if (jet >= 39){
+    graphic.setAnimation("high5");
+  }
+  if (jet >= 42){
+    graphic.setAnimation("high6");
+  }
+  if (jet >= 45){
+    graphic.setAnimation("high7");
+  }
+  if (jet >= 48){
+    graphic.setAnimation("high8");
+  }
+  if (jet >= 51){
+    graphic.setAnimation("high9");
+  }
+  if (jet >= 54){
+    graphic.setAnimation("high10");
+  }
+  if (jet >= 57){
+    graphic.setAnimation("high11");
+  }
+  if (jet >= 60){
+    graphic.setAnimation("full");
+  }
+  
+  //blue off road when live >1
+  if ((blue.x >= 360) || (blue.x <= 40) && (live > 1)){
+    slowdown();
+    speed = 40;
+  }
+  //blue off road when live <= 1
+  if ((blue.x >= 360) || (blue.x <= 40)  && (live <= 1)){
+    slowdown2();
+    speed = 30;
+  }
+
+  if (green.x <= -40 || green.x >= 440){
+    green.velocityX = 0;
+    green.velocityY = +7;
+  }
+  
+  if (yellow.x >= 440 || yellow.x <= -40){
+    yellow.velocityX = 0;
+    yellow.velocityY = yellow.velocityY +7;
+    
+  }
+  
+  //yellow & green speed
+  if (score >= 100){
+    green.velocityY = green.velocityY + randomNumber(1.8, 2);
+  }
+  
+  if (score >= 15){
+    yellow.velocityY = yellow.velocityY - randomNumber(2, 3);
+  }
+  
+  //moving1
+  if (everythingaboutblue >= 2000){
+    if (speed < 70){
+      speed = speed +10;
+    } else {
+      speed = randomNumber(69,71);
+    }
+    grass.setAnimation("dirt");
+    grass1.setAnimation("grassbrown1");
+    grass2.setAnimation("grassbrown2");
+    grass5.setAnimation("grassbrown1");
+    grass6.setAnimation("grassbrown2");
+    faster();
+    everythingaboutblue = everythingaboutblue + 1.13833;
+    road.setAnimation("road4");
+  }
+  
+  //moving2
+  if (everythingaboutblue >= 4000){
+    if (everythingaboutblue < 4300){
+      sign1.visible = 1;
+    } else {
+      sign1.visible = 0;
+    }
+    grass.setAnimation("sand");
+    grass1.setAnimation("grassbrown1");
+    grass2.setAnimation("grassbrown2");
+    grass3.setAnimation("cactus");
+    grass4.setAnimation("wheat");
+    grass5.setAnimation("grassbrown1");
+    grass6.setAnimation("grassbrown2");
+    grass7.setAnimation("cactus");
+    grass8.setAnimation("wheat");
+    faster();
+    everythingaboutblue = everythingaboutblue + 1.27666;
+  }
+  
+  //moving2
+  if (everythingaboutblue >= 6000){
+    if (speed < 80){
+      speed = speed +10;
+    } else {
+      speed = randomNumber(79,82);
+    }
+    grass.setAnimation("redsand");
+    faster();
+    everythingaboutblue = everythingaboutblue + 1.41499;
+    road.setAnimation("road5");
+  }
+  
+  //moving3
+  if (everythingaboutblue >= 8000){
+    if (everythingaboutblue < 8300){
+      sign1.visible = true;
+    }else{
+      sign1.visible = 0;
+    }
+    grass.setAnimation("snow");
+    grass3.visible = 0;
+    grass4.visible = 0;
+    grass7.visible = 0;
+    grass8.visible = 0;
+    faster();
+    everythingaboutblue = everythingaboutblue + 1.55332;
+  }
+  
+  //moving4
+  if (everythingaboutblue >= 10000){
+    if (speed < 90){
+      speed = speed +10;
+    } else {
+      speed = randomNumber(89,92);
+    }
+    grass.setAnimation("lake");
+    grass1.visible = 0;
+    grass2.visible = 0;
+    grass5.visible = 0;
+    grass6.visible = 0;
+    faster();
+    everythingaboutblue = everythingaboutblue +1.69165;
+    road.setAnimation("road6");
+  }
+  
+  //moving5
+  if (everythingaboutblue >= 12000){
+    if (everythingaboutblue < 12300){
+      sign1.visible = true;
+    }else{
+      sign1.visible = 0;
+    }
+    grass1.visible = 1;
+    grass2.visible = 1;
+    grass3.visible = 1;
+    grass4.visible = 1;
+    grass5.visible = 1;
+    grass6.visible = 1;
+    grass7.visible = 1;
+    grass8.visible = 1;
+    grass.setAnimation("grass");
+    grass1.setAnimation("grass1");
+    grass2.setAnimation("grass2");
+    grass3.setAnimation("grass3");
+    grass4.setAnimation("seed");
+    grass5.setAnimation("grass1");
+    grass6.setAnimation("grass2");
+    grass7.setAnimation("grass3");
+    grass8.setAnimation("seed");
+    everythingaboutblue = everythingaboutblue +1.83;
+  }
+  
+  //moving6
+  if (everythingaboutblue >= 16000 && everythingaboutblue < 16300){
+    sign1.visible = true;
+  }else{
+    sign1.visible = 0;
+  }
+  if (everythingaboutblue >= 16000){
+    if (speed < 100){
+      speed = speed +10;
+    } else {
+      speed = randomNumber(99,102);
+    }
+  }
+  
+  //moving7
+  if (everythingaboutblue >= 19000){
+    finishline.velocityY = + 12;
+    green.velocityY = 0;
+    yellow.velocityY = 0;
+  }
+  
+  //moving8
+  if (everythingaboutblue >= 20000){
+    blackbackground.visible = 1;
+    slowdown();
+    finish = 1;
+    meadel.visible = 1;
+    if (place == 1){
+      green.x = 300;
+      yellow.x = 400;
+    }
+    if (place == 2){
+      meadel.setAnimation("silver");
+      green.y = 0;
+      yellow.y = 300;
+    }
+    if (place == 3){
+      meadel.setAnimation("copper");
+      green.x = 0;
+      yellow.x = 10;
+    }
+    thisiscool = 0;
+  }
+  
+  //if your live <= 1
+  if (live <= 1){
+    if(counter1 ==1){
+      blue.setAnimation("blackcrash1");
+    }
+    if(counter2 ==1){
+      blue.setAnimation("greencrash1");
+    }
+    if(counter3 ==1){
+      blue.setAnimation("bluecrash1");
+    }
+    if(counter4 ==1){
+      blue.setAnimation("truckcrash1");
+    }
+    if(counter5 ==1){
+      blue.setAnimation("new carcrash");
+    }
+    slowdown();
+  }else{
+    if(counter1 ==1){
+      blue.setAnimation("black");
+    }
+    if(counter2 ==1){
+      blue.setAnimation("green");
+    }
+    if(counter3 ==1){
+      blue.setAnimation("blue");
+    }
+    if(counter4 ==1){
+      blue.setAnimation("truck");
+    }
+    if(counter5 ==1){
+      blue.setAnimation("new car");
+    }
+  }
+  
+  //if your live <= 0
+  if (live <= 0){
+    var gameover = createSprite(200,200);
+    gameover.setAnimation("gameover");
+    gameover.scale = 1.8;
+  }
+  
+  //the #1 code for calculating your place 
+  if (blue.y == green.y){
+    place = 1;
+  }
+  if (green.y < blue.y && yellow.y > blue.y){
+    place = 2;
+  }else{
+    place = 1;
+  }
+  
+  if (yellow.y < blue.y && green.y > blue.y){
+    place = 2;
+  }else{
+    place = 1;
+  }
+  
+  if (yellow.y < blue.y && green.y < blue.y){
+    place = 3;
+  }else{
+    place = 2;
+  }
+  if (yellow.y > blue.y && green.y > blue.y){
+    place = 1;
+  }
+  if ((score >= 30 && keyWentDown("l"))){
+    live = live +3;
+    score = score -30;
+  }
+  
+  // draw all things
+  drawSprites();
+  
+  //win
+  if (everythingaboutblue == 20000){
+    playSound("sound://category_music/fun_game_win_musical_4.mp3", false);
+  }if (everythingaboutblue >= 20000){
+    if (place == 2){
+      textSize(30);
+      fill(rgb(192, 192, 192));
+      text("Nice Job!",140,100);
+      text("Second Place!",110,300);
+    }
+    if (place == 3){
+      textSize(30);
+      fill(rgb(184, 134, 11));
+      text("Nice Try!",140,100);
+      text("Third Place!",120,300);
+    }
+    if (place == 1){
+      textSize(30);
+      fill(rgb(255, 215, 0));
+      text("Perfect!",170,100);
+      text("First Place!",120,300);
+    }
+  }
+  
+  //signs
+  if ((everythingaboutblue >= 4000 && everythingaboutblue < 4300)){
+    textSize(25);
+    fill("white");
+    text("1/4",180,30);
+  }
+  if ((everythingaboutblue >= 8000 && everythingaboutblue < 8300)){
+    textSize(25);
+    fill("white");
+    text("1/2",180,30);
+  }
+  if ((everythingaboutblue >= 12000 && everythingaboutblue < 12300)){
+    textSize(25);
+    fill("white");
+    text("3/4",180,30);
+  }
+  if ((everythingaboutblue >= 16000 && everythingaboutblue < 16300)){
+    textSize(20);
+    fill("white");
+    text("Last Lap",170,30);
+  }
+  
+  //information about you
+  if (thisiscool == 1){
+    textSize(20);
+    fill("white");
+    text("SCORE: " +score, 15, 20);
+    text("LIVE: " +live, 15, 50 );
+    text("PLACE: " + place, 280, 20 );
+    textSize(40);
+    text(speed, 320, 360 );
+  }
+  
+  //instructions
+  if (backgroundtext == 1){
+    textFont("comfortaa");
+    textSize(25);
+    fill("white");
+    text("CHOOSE YOUR VEHICLE", 50, 180);
+    textSize(20);
+    text("Space For Boost When           Is Green",96,100);
+    text("L For Buy Lives For 30 Coins", 150, 60);
+    text("W/S, Up/Down For using powers", 70, 140);
+    textSize(18);
+    text("Roadster Gen 2",220,225);
+    text("Model 3       Model X         Model S      Cybertruck", 25, 370);
+  }
+}
